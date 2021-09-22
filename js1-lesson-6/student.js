@@ -1,4 +1,4 @@
-//i love corn! !!!
+//i love corn!
 const students = [
     { birthYear: 1980, marks: 80 },
     { birthYear: 1979, marks: 60 },
