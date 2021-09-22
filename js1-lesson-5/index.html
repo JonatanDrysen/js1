@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script>
+            let greeting = "hello";
+            console.log(greeting);
+
+            function myFunction(){
+                console.log("clicking")
+                //document.getElementById("demo").innerHTML = "Du har klickat på rubriken" 
+                const parent = document.getElementById("demo")
+                const child = document.createElement("p")
+                child.innerHTML = "magiskt skapad text"
+                parent.appendChild(child)
+            }
+
+            function onHover(){
+                console.log("hovering")
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onmouseover="onHover()" onclick="myFunction()">Hello world</h1>
+
+        <p id="demo">
+        </p>
+
+        <p1>
+            Hej allesammans
+            <br/>
+            <a href="#form">länk till formulär</a>
+        </p1>
+        <p>
+            Jag håller på att lära mig html.<br/>
+            <hr/>
+            Och lite JS.
+            <!-- kommentar lalalalalala, blank tar länken till en ny tab-->
+            <br/>
+            <a href="https//dn.se" target="_blank">här är en länk till DN</a>
+            <br/>
+            <img
+                alt="En kattunge som leker" 
+                src="https://media4.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif?cid=ecf05e47n065zl0bfykw5kpm7vidw33p20ymorf7br67wdj3&rid=giphy.gif&ct=g" />
+        </p>
+        <p>
+            <form id="form">
+                <div id="firstName">
+                    <label for="firstName">Fyll i ditt förnamn</label>
+                    <input id="firstName" placeholder="Jonis" name="first-name"/>
+                </div>
+
+                <div id="lastName">
+                    <label for="lastName">Fyll i ditt efternamn</label>
+                    <input id="lastName" name="last-name"/>
+                </div>
+
+                <div id="phone">
+                    <label>Telefon</label>
+                    <input id="phone" name="phone" type="tel"/>
+                </div>
+
+                <div id="password">
+                    <label>lösenord</label>
+                    <input id="password" name="password" type="password"/>
+                </div>
+
+                <div id="date">
+                    <label>datum</label>
+                    <input id="date" name="date" type="date"/>
+                </div>
+
+                <div id="cars">
+                <label for="cars">välj din bil</label>
+                <select id="cars" name="cars">
+                    <option value="1">Toyota</option>
+                    <option value="2" selected>mazda</option>
+                    <option value="3">saab</option>
+                </select>
+                </div>
+
+                <div id="fruits">
+                    <label for="fruits">välj frukt</label>
+                    <select id="fruit" name="fruit" multiple>
+                        <option value="1">banan</option>
+                        <option value="2" selected>äpple</option>
+                        <option value="3">tomat</option>
+                    </select>
+                </div>
+
+                <div id="text">
+                    <label for="lifeStory">Din livshistoria</label>
+                    <textarea rows="10" cols="50" name="lifeStory" id="lifeStory"></textarea>
+                </div>
+
+                <button type="submit">skicka in</button>
+                <button type="reset">Nollställ</button>
+            </form>
+        </p>
+    </body>
+</html>
